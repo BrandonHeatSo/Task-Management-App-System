@@ -6,7 +6,7 @@
 
 * AWS Cloud9
 * Ruby
-* Git
+* Git(HTTPSからSSH通信へ変更)
 * Heroku
 
 ```
