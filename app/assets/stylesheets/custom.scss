@@ -69,11 +69,10 @@ p {
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
-}
-
-#logo:hover {
-  color: #fff;
-  text-decoration: none;
+  &:hover {
+    color: silver;
+    text-decoration: none;
+  }
 }
 
 /* デバッグウインドウ */
