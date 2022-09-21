@@ -3,7 +3,7 @@
     <%= link_to "Task App", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Top", root_path %></li>
+        <li><%= link_to "Top", root_path, class: "header-list" %></li>
         <% if logged_in? %>
           <li><%= link_to "Users", '#' %></li>
           <li class="dropdown">
@@ -18,7 +18,7 @@
             </ul>
           </li>
         <% else %>
-          <li><%= link_to "Log in", login_path %></li>
+          <li><%= link_to "Log in", login_path, class: "header-list" %></li>
         <% end %>
       </ul>
     </nav>
