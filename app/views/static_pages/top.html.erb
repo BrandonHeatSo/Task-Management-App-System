@@ -1,16 +1,16 @@
 <% provide(:title, "Top") %>
-<div class="jumbotron">
-  <h1>TaskApp</h1>
-  <p>TaskAppは簡易ToDo管理ツールです。</p>
-  
-  <p>↓↓初めてのご利用↓↓</p>
 
-  <center>
-    <%= link_to "Sign Up", signup_path, class: "btn btn-lg btn-primary" %>
-    <%= link_to "Log In", login_path, class: "btn btn-lg btn-primary" %>
-  </center>
-  
 <div class="row">
+  
+  <div class="col-md-7">
+    <div class="center jumbotron" id="top-main">
+      <h1 id="top-main-title">TaskApp</h1>
+      <p>TaskAppは簡易ToDo管理ツールです。</p>
+      <p>↓↓初めてのご利用↓↓</p>
+        <%= link_to "アカウント作成", signup_path, class: "btn btn-lg btn-success" %>
+    </div>
+  </div>
+  
   <div class="col-md-6 col-md-offset-3">
     <%= form_with(scope: :session, url: login_path, local: true) do |f| %>
 
@@ -31,6 +31,4 @@
       ユーザー登録がまだの場合は<%= link_to "こちら", signup_path %>
     </p>
   </div>
-</div>
-
 </div>
