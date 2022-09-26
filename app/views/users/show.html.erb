@@ -19,8 +19,8 @@
           <td><%= @user.email %></td>
         </tr>
         <tr>
-          <th class="active"><%= User.human_attribute_name :created_at %></th>
-          <td><%= @user.created_at %></td>
+          <th class="active"><%= User.human_attribute_name :created_at, format: :long %></th>
+          <td><%= l(@user.created_at, format: :long) %></td>
         </tr>
       </tbody>
     </table>
