@@ -12,7 +12,7 @@ class TasksController < ApplicationController
   
   def create
     @user = User.find(params[:user_id])
-    @task = Task.new(task_params)
+    @task = @user.tasks.build(task_params)
     if @task.save
       # 保存成功の場合、ここに記述した処理が実行される。
     else
