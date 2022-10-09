@@ -21,6 +21,9 @@ class TasksController < ApplicationController
     end
   end
   
+  def edit
+  end
+  
   private
   
     def task_params
