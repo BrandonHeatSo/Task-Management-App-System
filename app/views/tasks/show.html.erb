@@ -16,7 +16,7 @@
         </tr>
         <tr>
           <th class="active"><%= Task.human_attribute_name :description %></th>
-          <td><%= @task.description %></td>
+          <td><%= raw Rinku.auto_link(safe_join(@task.description.split("\n"), tag(:br))) %></td>
         </tr>
         <tr>
           <th class="active"><%= Task.human_attribute_name :created_at %></th>
