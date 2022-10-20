@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails',        '~> 5.1.6'
 gem 'rails-i18n' # これで色々な情報を日本語化！
 gem 'bcrypt'
-gem 'faker'
+gem 'faker' # タスク管理の最初から、サンプルユーザー作る為のコイツは入ってたみたいねｗ！
 gem 'bootstrap-sass'
 gem 'puma',         '~> 3.7'
 gem 'sass-rails',   '~> 5.0'
