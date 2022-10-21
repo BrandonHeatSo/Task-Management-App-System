@@ -13,6 +13,8 @@ gem 'jquery-rails'
 gem 'turbolinks',   '~> 5'
 gem 'jbuilder',     '~> 2.5'
 gem 'rinku' # これでリンク含みテキストをアクセス可能に表示！
+gem 'will_paginate' # ページネーションに必須その１！
+gem 'bootstrap-will_paginate' # ページネーションに必須その２！
 
 group :development, :test do
   gem 'sqlite3'
