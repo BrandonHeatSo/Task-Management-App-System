@@ -6,7 +6,7 @@
         <li><%= link_to "トップ", root_path, class: "header-list" %></li>
         <% if logged_in? %>
           <% if current_user.admin? %>
-            <li><%= link_to "利用者一覧", '#', class: "header-list" %></li>
+            <li><%= link_to "利用者一覧", users_path, class: "header-list" %></li>
           <% end %>
           <li><%= link_to "タスク作成", new_user_task_path(current_user), class: "header-list" %></li>
           <li class="dropdown">
