@@ -23,6 +23,13 @@
               <span class="label label-success label-user-division">一般</span>
             <% end %>
           </td>
+          <td>
+            <% unless user.admin? %>
+              <%= link_to "削除", user, method: :delete,
+                  data: { confirm: "#{user.name}を削除します。よろしいですか？" },
+                  class: "btn btn-danger btn-sm pull-right" %>
+            <% end %>
+          </td>
         </tr>
       <% end %>
       </tbody>

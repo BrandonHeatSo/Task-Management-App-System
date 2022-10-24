@@ -2,7 +2,7 @@ class TasksController < ApplicationController
 
   def index
     @user = User.find(params[:user_id])
-    @tasks = @user.tasks
+    @tasks = @user.tasks.order(id: :DESC)
   end
   
   def show
