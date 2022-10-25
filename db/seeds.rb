@@ -18,7 +18,7 @@ end
 
 admin_user = User.first
 guest1_user = User.find(2)
-guest2_user = User.find(2)
+guest2_user = User.find(3)
 
 50.times do |n|
   task_name = "タスク#{n + 1}"
