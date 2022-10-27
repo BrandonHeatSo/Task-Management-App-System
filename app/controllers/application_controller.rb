@@ -13,9 +13,10 @@ class ApplicationController < ActionController::Base
   end
     
   # アクセスしたユーザーが現在ログインしているユーザーか確認します。
+  # 各子Ｃ内で@userは定義済なので、@user定義はカット済！
+  # （逆に入れるとどっちかの子Ｃでエラーになる！！）
   def correct_user
-    @user = User.find(params[:user_id])
-    redirect_to(root_url) unless @user == current_user
+    redirect_to(root_url) unless current_user?(@user)
   end
     
   # システム管理権限所有かどうか判定します。
@@ -24,8 +25,9 @@ class ApplicationController < ActionController::Base
   end
     
   # 管理権限者、または現在ログインしているユーザー本人を許可します。
+  # 各子Ｃ内で@userは定義済なので、@user定義はカット済！
+  # （逆に入れるとどっちかの子Ｃでエラーになる！！）
   def admin_or_correct_user
-    @user = User.find(params[:user_id]) if @user.blank?
     unless current_user?(@user) || current_user.admin?
       flash[:danger] = "権限がありません。"
       redirect_to(root_url)
