@@ -58,6 +58,9 @@ class TasksController < ApplicationController
     
     # paramsハッシュからタスクを取得します。
     def set_task
-      @task = Task.find(params[:id])
+      unless @task = @user.tasks.find_by(id: params[:id])
+        flash[:danger] = "権限がありません。"
+        redirect_to user_tasks_url(@user)
+      end
     end
 end
